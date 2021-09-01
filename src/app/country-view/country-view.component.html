@@ -1,0 +1,37 @@
+<div class="container-fluid back">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <!--Country Detail Box starts-->
+        <div class="col-md-8" *ngIf="currentCountry">
+            <div class="card countryCard text-center" style="width: 100%;"
+                *ngFor="let currentCountry of currentCountry">
+                <img class="card-img-top" src="{{currentCountry.flag}}" alt="Card image cap"
+                    style="height:350px; width:100%; border: 1px solid white">
+                <div class="card-body">
+                    <h3 class="card-title text-truncate">{{currentCountry.name}}</h3>
+                    <p class="card-text">Native name: {{currentCountry.nativeName}}</p>
+                    <p class="card-text text-truncate">Language:
+                        <a [routerLink]="['/allcountries/language',language.iso639_1]"
+                            *ngFor='let language of currentCountry.languages; let first = first; let last = last;'>{{language.name}}{{last
+                            ? '' : ', '}}
+                        </a>
+                    </p>
+                    <p class="card-text text-truncate">Currency:
+                        <a [routerLink]="['/allcountries/currency',currency.code]"
+                            *ngFor='let currency of currentCountry.currencies; let first = first; let last = last;'>{{currency.name}}{{last
+                            ? '' : ', '}}
+                        </a>
+                    </p>
+                    <p class="card-text">Capital: {{currentCountry.capital}}</p>
+                    <p class="card-text">Population: {{currentCountry.population}}</p>
+                    <p class="card-text">Region: {{currentCountry.region}}</p>
+                    <p class="card-text">Sub-Region: {{currentCountry.subregion}}</p>
+                    <p class="card-text">TimeZones: {{currentCountry.timezones}}</p>
+                    <p class="card-text">Area: {{currentCountry.area}}</p>
+                </div>
+            </div>
+        </div>
+        <!--Country Detail Box ends-->
+        <div class="col-md-2"></div>
+    </div>
+</div>

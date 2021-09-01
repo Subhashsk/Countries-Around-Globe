@@ -1,0 +1,66 @@
+<div class=" container-fluid back">
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <h1>We are here to serve you</h1> with all the details of all the countries.
+            <br>
+            Now each country detail is just a click away.
+            You can choose any region from the given list to gain in depth knowledge about it.
+            <br><br><br>
+            <div style="text-align:center" class="world">
+                <h1>W</h1><br>
+                <h1>O</h1><br>
+                <h1>R</h1><br>
+                <h1>L</h1><br>
+                <h1>D</h1><h5>is here...</h5>
+            </div>
+            <br><br><br>
+            <div>
+                Know about every country's <h1>Language, Currency and much more...</h1> You can now see all the
+                countries with same Language
+                and same currency at this platform since this website uses filter response feature from API.
+                <br>
+                You are free to explore this website.
+            </div>
+        </div>
+
+        <div class="col-md-6" style="border-left: 0.5px solid whitesmoke">
+            <!--Region Card begins-->
+            <div *ngFor="let region of regionNames" class="row regionCard">
+                <div class="col-md-5">
+                    <img class="imageCard" src={{region.image}} alt="Card image cap">
+                </div>
+
+                <div class="col-md-5">
+                    <h3>{{region.regionName}}</h3>
+                </div>
+
+                <div class="col-md-2">
+                    <a [routerLink]="['/allcountries', region.regionName]" class="btn btn-primary"
+                        style="float:right">></a>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        {{region.description}}
+                    </div>
+                </div>
+            </div>
+            <!--Region Card ends-->
+        </div>
+    </div>
+    <br><br>
+    <div class="row back" style="text-align: center">
+
+        <div class="col-md-12">
+            <p>
+                This platform lets you explore all five regions including Africa,<br><br> Americas,
+                Asia, Europe, Oceania.
+                You can know about all the countries that comes under each of these regions seperately.<br><br>
+                Some special features are available on this platform where you can explore all the countries with same
+                Currency & language <br><br>irrespective of the regions.
+                <br><br><br><br>
+            </p>
+        </div>
+    </div>
+</div>

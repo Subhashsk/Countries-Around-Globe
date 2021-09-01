@@ -1,0 +1,12 @@
+.back{
+    background: lightcoral;
+}
+
+.countryCard{
+    background-color: rgb(184, 163, 124);
+    opacity: 1;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    box-shadow: 2px 0px 20px 2px black;
+    color:white;
+}
